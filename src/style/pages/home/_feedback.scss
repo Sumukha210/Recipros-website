@@ -1,0 +1,42 @@
+.feedback {
+  height: 50vh;
+  width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+    url("./feedback.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+  &__content {
+    @include container;
+    @include flex(column, center);
+    align-items: initial;
+    min-height: 100%;
+    color: $text-light;
+    line-height: 2rem;
+
+    .name {
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      @include breakpoint-up(md) {
+        text-align: right;
+        margin-right: 200px;
+      }
+    }
+
+    @include breakpoint-up(sm) {
+      p {
+        font-size: 1.1rem;
+        text-align: justify;
+        font-weight: bold;
+        color: rgb(240, 236, 236);
+
+        @include breakpoint-up(md) {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

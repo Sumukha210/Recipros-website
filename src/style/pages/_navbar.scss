@@ -1,0 +1,125 @@
+.navbar {
+  position: relative;
+  z-index: $navbar-index;
+
+  //navbar fixed on large screen
+  // @include breakpoint-up(sm) {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.43);
+  padding: 20px 0;
+  // }
+
+  //main container
+  &__container {
+    @include container;
+
+    @include breakpoint-up(sm) {
+      @include flex(row, space-between);
+    }
+  }
+
+  //overalay screen on small screen
+  .overlay {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
+    height: -200vh;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.43);
+    transition: height 1s ease-in, opacity 1s ease-in;
+
+    &.open {
+      height: 100vh;
+      opacity: 1;
+    }
+
+    @include breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  //menu icon
+  &__icon {
+    color: $text-light;
+
+    @include breakpoint-up(sm) {
+      display: none;
+    }
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 10%;
+  }
+
+  //logo
+  &__logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: $text-light;
+
+    @include breakpoint-down(sm) {
+      padding-top: 5px;
+    }
+  }
+
+  //default li styles
+  li {
+    list-style: none;
+    a {
+      text-decoration: none;
+      color: $text-light;
+    }
+  }
+
+  //nav ul
+  &__main {
+    //on large screen size
+    @include breakpoint-up(sm) {
+      @include flex(row, space-between);
+
+      li {
+        margin-right: 20px;
+      }
+    }
+
+    //menu on small size
+    @include breakpoint-down(sm) {
+      background-color: $text-light;
+      position: absolute;
+      top: -100vh;
+      left: 0%;
+      right: 0%;
+      width: 80%;
+      height: 320px;
+      margin: auto;
+      box-shadow: 0px 0px 10px silver;
+
+      transition: top 1s ease-in;
+
+      li {
+        text-align: center;
+        margin: 60px 0;
+
+        &:nth-child(1) {
+          margin-top: 60px;
+        }
+
+        a {
+          color: $text-dark;
+          font-weight: bold;
+          font-size: 1.1rem;
+        }
+      }
+
+      &.open {
+        top: 10vh;
+      }
+    }
+  }
+}

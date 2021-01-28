@@ -1,0 +1,13 @@
+@import "./config/variables";
+@import "./config/globals";
+@import "./config/mixins";
+
+@import "./pages/navbar";
+
+//home page style
+@import "./pages/home/hero";
+@import "./pages/home/categories";
+@import "./pages/home/feedback";
+
+//recipe page
+@import "./pages/recipes/recipes";
