@@ -2,31 +2,16 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Recipros</h3>
+  <h1 align="center">Recipros</h1>
 
-  <p align="center">
+  <h3 align="center">
     A Recipe search website
-  </p>
+  </h3>
  <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Live Demo</a>
+ 
+ ## Click here for live demo   <a href="https://github.com/othneildrew/Best-README-Template">Recipros</a>
 
 </p>
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-    
-  </ol>
-</details>
 
 <!-- ABOUT THE PROJECT -->
 
@@ -51,12 +36,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
-In the project directory, you can run:
+### To run project:-
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### To build project:-
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `npm run build`
