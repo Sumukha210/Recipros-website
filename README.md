@@ -17,7 +17,7 @@
 
 ## About The Project
 
-![alt text](https://raw.githubusercontent.com/Sumukha210/Recipros-website/master/public/assets/Annotation%202021-01-29%20234435.png" Recipros home page")
+![Home page](https://raw.githubusercontent.com/Sumukha210/Recipros-website/master/public/assets/Annotation%202021-01-29%20234435.png "Recipros home page")
 
 Recipros is a recipe search website, Where the users can search for the recipe's either by name or category. The entire instruction is available for that particular recipe. Also the user's can bookmark recipe which is stored in the localstorage. I'm using the [TheMealDb Api](https://www.themealdb.com/api.php) Api to get Recipes.
 
