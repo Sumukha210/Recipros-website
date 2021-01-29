@@ -1,0 +1,13 @@
+.chooseUs {
+  @include container;
+
+  img {
+    height: 50px;
+  }
+
+  .card {
+    margin-top: 4rem;
+    height: 200px;
+    text-align: center;
+  }
+}

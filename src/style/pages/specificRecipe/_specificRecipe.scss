@@ -1,0 +1,60 @@
+.specificRecipe {
+  margin-top: 6rem;
+
+  .backBtn {
+    background-color: $bg-primary !important;
+    margin-bottom: 2rem;
+    color: $text-light;
+    font-weight: bold;
+
+    &:hover {
+      background-color: lighten($bg-primary, 10%) !important;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    letter-spacing: 2px;
+    margin-bottom: 1rem !important;
+    text-transform: uppercase;
+    font-family: $secondary-family !important;
+    font-style: normal !important;
+  }
+
+  .category,
+  .intro,
+  .name {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .para {
+    line-height: 1.9rem;
+    font-size: 1.1rem !important;
+  }
+
+  .iconContainer {
+    text-align: right;
+  }
+
+  .displayRecipeItems {
+    @include flex(row, flex-start);
+    flex-wrap: wrap;
+
+    h5 {
+      margin: 1rem 10px 10px 0;
+      background-color: $bg-grey;
+      color: $text-dark;
+      padding: 10px;
+      border-radius: 20px;
+
+      .ingredients {
+        margin-right: 5px;
+      }
+      .measures {
+        margin-left: 10px;
+      }
+    }
+  }
+}

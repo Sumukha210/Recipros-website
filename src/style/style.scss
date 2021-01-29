@@ -1,6 +1,6 @@
 @import "./config/variables";
-@import "./config/globals";
 @import "./config/mixins";
+@import "./config/globals";
 
 @import "./pages/navbar";
 
@@ -8,6 +8,13 @@
 @import "./pages/home/hero";
 @import "./pages/home/categories";
 @import "./pages/home/feedback";
+@import "./pages/home/chooseUs";
 
 //recipe page
 @import "./pages/recipes/recipes";
+
+//specific Recipe page
+@import "./pages/specificRecipe/specificRecipe";
+
+//bookmarks page
+@import "./pages/bookmarks/bookmarks";

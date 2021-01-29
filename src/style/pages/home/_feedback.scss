@@ -1,21 +1,26 @@
 .feedback {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   margin-top: 5rem;
   margin-bottom: 3rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)),
     url("./feedback.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 
   &__content {
+    max-width: 95%;
+    overflow: hidden;
     @include container;
     @include flex(column, center);
     align-items: initial;
     min-height: 100%;
     color: $text-light;
     line-height: 2rem;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    padding: 1rem;
 
     .name {
       font-size: 1.3rem;
@@ -23,18 +28,36 @@
       @include breakpoint-up(md) {
         text-align: right;
         margin-right: 200px;
+        letter-spacing: 1px;
       }
     }
 
-    @include breakpoint-up(sm) {
-      p {
+    .second-para {
+      &::first-letter {
+        margin-left: 40px;
+      }
+
+      @include breakpoint-down(sm) {
+        visibility: hidden !important;
+        display: none !important;
+      }
+    }
+
+    p {
+      &::first-letter {
+        font-size: 1.5rem;
+      }
+
+      @include breakpoint-up(sm) {
         font-size: 1.1rem;
         text-align: justify;
         font-weight: bold;
-        color: rgb(240, 236, 236);
+        color: rgba(228, 224, 224, 0.986);
 
         @include breakpoint-up(md) {
-          width: 60%;
+          width: 70%;
+          margin: 0 auto;
+          line-height: 2.3rem;
         }
       }
     }

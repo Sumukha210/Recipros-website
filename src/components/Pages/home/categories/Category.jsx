@@ -1,7 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom";
+import { DataContext } from "../../../../Context/DataContext";
 
-const Category = ({ img, title, content, path }) => {
+const Category = ({ img, title, content, type }) => {
+  const history = useHistory();
+  const { getMeals } = useContext(DataContext);
+
+  const handleViewBtn = () => {
+    getMeals(type, null);
+
+    setTimeout(() => {
+      history.push("/recipes");
+    }, 200);
+  };
+
   return (
     <div className="categories__section">
       <figure>
@@ -10,7 +23,7 @@ const Category = ({ img, title, content, path }) => {
       <div className="categories__section--content">
         <h6 className="title">{title}</h6>
         <p className="para">{content}</p>
-        <Button>View</Button>
+        <Button onClick={handleViewBtn}>View</Button>
       </div>
     </div>
   );

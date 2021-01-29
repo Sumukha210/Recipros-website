@@ -2,6 +2,7 @@
   @include container;
   margin-top: 6rem;
 
+  //header starts
   .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
   .MuiFilledInput-underline:after {
     border-color: $bg-primary !important;
@@ -15,4 +16,12 @@
       width: 40vw;
     }
   }
+  //header ends
+
+  //displayContainer style starts
+  .displayContainer {
+    margin-top: 4rem;
+  }
+
+  //displayContainer style ends
 }

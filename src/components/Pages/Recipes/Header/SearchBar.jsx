@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import Search from "@material-ui/icons/Search";
 import { useDebounce } from "@react-hook/debounce";
+import { DataContext } from "../../../../Context/DataContext";
 
 const SearchBar = () => {
   const [inputVal, setInputVal] = useState("");
-  const [searchQuery, setSearchQuery] = useDebounce("", 700);
+  const [searchQuery, setSearchQuery] = useDebounce("", 500);
+  const { getMeals } = useContext(DataContext);
 
   const handleInput = e => {
     setInputVal(e.target.value);
@@ -14,12 +16,12 @@ const SearchBar = () => {
   };
 
   useEffect(() => {
-    console.log("searchQuery", searchQuery);
+    searchQuery.length && getMeals(null, searchQuery);
   }, [searchQuery]);
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("submit", e.target.textInput.value);
+    searchQuery.length && getMeals(null, e.target.textInput.value);
   };
 
   return (

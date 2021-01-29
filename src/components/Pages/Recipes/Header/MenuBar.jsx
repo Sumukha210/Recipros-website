@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import InputLabel from "@material-ui/core/InputLabel";
 import Select from "@material-ui/core/Select";
 import FormControl from "@material-ui/core/FormControl";
 import MenuItem from "@material-ui/core/MenuItem";
 import makeStyles from "@material-ui/core/styles/makeStyles";
+import { DataContext } from "../../../../Context/DataContext";
 
 const useStyles = makeStyles(theme => ({
   formControl: {
@@ -20,11 +21,11 @@ const MenuBar = () => {
   const [selectVal, setSelectVal] = useState("");
   const [categories, setCategories] = useState([]);
   const classes = useStyles();
+  const { getMeals } = useContext(DataContext);
   let localName = "categories";
 
   const handleSelect = e => {
     setSelectVal(e.target.value);
-    console.log(e.target.value);
   };
 
   const getCategories = async () => {
@@ -50,6 +51,12 @@ const MenuBar = () => {
     localStorage.setItem(localName, JSON.stringify(categories));
   }, [categories]);
 
+  useEffect(() => {
+    if (selectVal.length && selectVal != "none") {
+      getMeals(selectVal);
+    }
+  }, [selectVal]);
+
   return (
     <>
       <FormControl variant="outlined" className={classes.formControl}>
@@ -68,7 +75,7 @@ const MenuBar = () => {
               </MenuItem>
             ))
           ) : (
-            <MenuItem value="">
+            <MenuItem value="none">
               <em>None</em>
             </MenuItem>
           )}

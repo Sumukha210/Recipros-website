@@ -1,8 +1,8 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
-import SearchBar from "../SearchBar";
-import MenuBar from "../MenuBar";
+import SearchBar from "./SearchBar";
+import MenuBar from "./MenuBar";
 
 const CustomSelct = () => {
   return (

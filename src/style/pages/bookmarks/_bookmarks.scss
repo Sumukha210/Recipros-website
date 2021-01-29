@@ -1,0 +1,8 @@
+.bookmark {
+  @include container;
+  margin-top: 6rem;
+
+  .message {
+    text-align: center;
+  }
+}

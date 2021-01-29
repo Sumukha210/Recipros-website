@@ -1,12 +1,14 @@
 import React from "react";
+import DisplayContainer from "./DisplayRecipes";
 import Header from "./Header/Header";
 
-const SearchPage = () => {
+const RecipesPage = () => {
   return (
     <div className="recipes">
       <Header />
+      <DisplayContainer />
     </div>
   );
 };
 
-export default SearchPage;
+export default RecipesPage;

@@ -7,9 +7,28 @@
   position: fixed;
   top: 0%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.43);
   padding: 20px 0;
   // }
+
+  &.bg-sticky {
+    background-color: rgba(0, 0, 0, 0.822);
+  }
+
+  &.bg-white {
+    background-color: $text-light;
+    // border-bottom: 5px solid $bg-primary;
+    box-shadow: 0px 0px 10px silver;
+
+    a {
+      color: $text-dark;
+    }
+    .navbar {
+      &__logo,
+      &__icon {
+        color: $bg-dark;
+      }
+    }
+  }
 
   //main container
   &__container {
@@ -74,6 +93,11 @@
     a {
       text-decoration: none;
       color: $text-light;
+      font-weight: bold;
+
+      &.true {
+        color: $bg-primary !important;
+      }
     }
   }
 

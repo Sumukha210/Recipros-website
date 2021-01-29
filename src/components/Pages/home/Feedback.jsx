@@ -5,13 +5,15 @@ const Feeback = () => {
     <div className="feedback">
       <div className="feedback__content">
         <p>
-          It is my favourite platform to find recipes. There are thousand’s are
-          available and it is easy to follow.
-          <br />
+          It is my favourite platform to find recipes. There are thousand’s of
+          recipes are available and it is easy to follow instruction.
+        </p>
+        <br />
+        <p className="second-para">
           Braised greens, smothered chicken, beans, catfish: find a new favorite
           dish from our collection of more than 150 recipes.
         </p>
-        <h5 className="name">Mr. Undertaker</h5>
+        <h5 className="name">- Mr. Undertaker</h5>
       </div>
     </div>
   );
