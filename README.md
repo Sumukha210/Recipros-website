@@ -15,7 +15,7 @@
 
 <!-- ABOUT THE PROJECT -->
 
-## About The Project
+## About The Project:-
 
 ![home page](https://raw.githubusercontent.com/Sumukha210/Recipros-website/master/public/assets/Annotation%202021-01-29%20234435.png" Recipros home page")
 
@@ -23,10 +23,16 @@ Recipros is a recipe search website, Where the users can search for the recipe's
 
 ### Built With
 
-- ### React
-- ### Redux
-- ### React material ui
-- ### sass
+- #### React
+- #### Context Api
+- #### React material ui
+- #### sass
+
+### Key concepts:-
+
+- #### React hooks
+- #### Localstorage api
+- #### Debouncing
 
 <!-- GETTING STARTED -->
 
