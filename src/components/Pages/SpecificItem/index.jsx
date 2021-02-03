@@ -68,6 +68,7 @@ const SpecificPage = () => {
 
   /**related to retriving and saving paricular api data ends */
   useEffect(() => {
+    window.scrollTo(0, 0);
     const localData = localStorage.getItem("bookmarkrecipe");
     if (localData && JSON.parse(localData).length) {
       setBookmark(JSON.parse(localData));
